@@ -1,0 +1,225 @@
+/* Contenedor principal */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+}
+
+/* Estilo del encabezado */
+.home-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.home-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+/* Estilo del título */
+.home-title {
+    font-family: var(--font-family-heading);
+    font-size: 1.5rem;
+    margin: 0;
+    top: 4px;
+    position: relative;
+    background: linear-gradient(270deg, #e3cb4b, #4b98e3, #e34b4b);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-animation: Title 10s ease infinite;
+    -moz-animation: Title 10s ease infinite;
+    animation: Title 10s ease infinite;
+}
+
+/* Estilo del contenedor de acciones */
+.home-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del campo de búsqueda */
+.home-search-input {
+    padding: 0.5rem;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+    background-color: var(--input-background);
+    font-family: var(--font-family-body);
+    margin-right: 1rem;
+}
+
+/* Estilo del botón del menú */
+.home-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    transition: border 0.3s ease, border-radius 0.3s ease;
+    width: 35px;
+    height: 35px;
+}
+
+/* Estilo cuando el botón está enfocado o el menú desplegable es visible */
+.home-menu-button:focus, 
+.home-menu-button.active {
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+/* Estilo del icono del menú */
+.home-menu-icon {
+    font-size: 30px;
+}
+
+/* Estilo del menú desplegable */
+.home-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los elementos del menú */
+.home-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-menu-item:hover {
+    background-color: var(--blue-color);
+    color: var(--primary-foreground-color);
+}
+
+.home-menu-item span {
+    margin-left: 0.5rem;
+}
+
+/* Estilo de la sección de tiendas destacadas */
+.home-featured-stores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--primary-color);
+    font-family: var(--font-family-heading);
+}
+
+/* Contenedor de las cards */
+.home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+/* Estilo de cada card de tienda */
+.store-card {
+    width: 300px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+/* Estilo del banner de la tienda */
+.store-banner {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Contenido de la card */
+.store-card-content {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo de la imagen de perfil */
+.store-profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+    object-fit: cover;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
+
+/* Estilo del contenedor del nombre y la categoría */
+.store-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo del nombre de la tienda */
+.store-name {
+    font-family: var(--font-family-heading);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Estilo de la categoría de la tienda */
+.store-category {
+    font-family: var(--font-family-body);
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Contenedor de los iconos */
+.store-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilo de los iconos */
+.store-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.store-icon:hover {
+    color: var(--primary-color);
+}
+
+@-webkit-keyframes Title {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Title {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Title { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

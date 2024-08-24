@@ -1,0 +1,15 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --blue-color: #b3d8ff;
+    --border-color: #dee2e6;
+    --input-background: #ffffff;
+    --input-border: #ced4da;
+    --font-family-body: 'Arial', sans-serif;
+    --font-family-heading: 'Helvetica', sans-serif;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border: #b1b8bf;
+}
